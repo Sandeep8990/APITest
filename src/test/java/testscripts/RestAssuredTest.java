@@ -9,7 +9,7 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestAssuredTest {
 	
-	@Test
+	@Test(groups = "tests")
 	public void testRestService() {
 		
 		RestAssured.baseURI = ("https://reqres.in/");
@@ -20,6 +20,18 @@ public class RestAssuredTest {
 		
 		String responseBody = response.getBody().asString();
 		System.out.println("Response dody "+ responseBody);
+		
+		response = RestAssured
+			.given()
+				.contentType("application/json")
+			.when()
+				.get()
+			.then()
+				.statusCode(200)
+			.extract().response()
+		;
+		
+		System.out.println("Response BDD "+ responseBody);
 	}
 
 }

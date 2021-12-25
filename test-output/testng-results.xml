@@ -2,12 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3068" started-at="2021-12-23T20:15:11 IST" finished-at="2021-12-23T20:15:14 IST">
+  <suite name="Default suite" duration-ms="2953" started-at="2021-12-25T10:58:19 IST" finished-at="2021-12-25T10:58:22 IST">
     <groups>
+      <group name="tests">
+        <method signature="RestAssuredTest.testRestService()[pri:0, instance:testscripts.RestAssuredTest@1efed156]" name="testRestService" class="testscripts.RestAssuredTest"/>
+      </group> <!-- tests -->
     </groups>
-    <test name="Default test" duration-ms="3068" started-at="2021-12-23T20:15:11 IST" finished-at="2021-12-23T20:15:14 IST">
+    <test name="Default test" duration-ms="2953" started-at="2021-12-25T10:58:19 IST" finished-at="2021-12-25T10:58:22 IST">
       <class name="testscripts.RestAssuredTest">
-        <test-method status="PASS" signature="testRestService()[pri:0, instance:testscripts.RestAssuredTest@1efed156]" name="testRestService" duration-ms="3041" started-at="2021-12-23T20:15:11 IST" finished-at="2021-12-23T20:15:14 IST">
+        <test-method status="PASS" signature="testRestService()[pri:0, instance:testscripts.RestAssuredTest@1efed156]" name="testRestService" duration-ms="2927" started-at="2021-12-25T10:58:19 IST" finished-at="2021-12-25T10:58:22 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRestService -->
