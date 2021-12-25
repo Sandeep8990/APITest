@@ -3,10 +3,10 @@
 <suite name="AllTestsSuite">
     <test name="Testing Annotations Test">
      <groups>
-            <run>
+            <!-- <run>
                 <include name="tests"/>
                 <include name="Regression"/>
-            </run>
+            </run> -->
         </groups>
         <classes>
             <class name="testscripts.RestAssuredTest">

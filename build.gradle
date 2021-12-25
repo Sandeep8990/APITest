@@ -31,10 +31,12 @@ dependencies {
 	
 
 }
-test {
+ test {
+ 	dependsOn 'cleanTest'
     useTestNG(){
        useDefaultListeners = true // Tells TestNG to execute its default reporting structure
-       suites 'testng.xml' //location of our suite.xml
+       includeGroups 'tests'
+       //suites 'testng.xml' //location of our suite.xml
     }
-    
+    testLogging.showStandardStreams = true
 }
