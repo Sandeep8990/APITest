@@ -9,8 +9,33 @@ import io.restassured.specification.RequestSpecification;
 
 public class RestAssuredTest {
 	
-	@Test(groups = "tests")
+	@Test(groups = "tester")
 	public void testRestService() {
+		
+		RestAssured.baseURI = ("https://reqres.in/");
+		
+		RequestSpecification httpRequest = RestAssured.given();
+		
+		Response response = httpRequest.request(Method.GET,"api/users/2");
+		
+		String responseBody = response.getBody().asString();
+		System.out.println("Response dody "+ responseBody);
+		
+		response = RestAssured
+			.given()
+				.contentType("application/json")
+			.when()
+				.get()
+			.then()
+				.statusCode(200)
+			.extract().response()
+		;
+		
+		System.out.println("Response BDD "+ responseBody);
+	}
+
+	@Test(groups = "tests")
+	public void testRestServiceG2() {
 		
 		RestAssured.baseURI = ("https://reqres.in/");
 		
